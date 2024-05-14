@@ -1,6 +1,7 @@
 ## LLaVA
 
 - https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
+  - untested, but xtuner has some interesting model fusions (llama3, phi3, etc.)
 - https://llava.hliu.cc/
 ```python
 from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration

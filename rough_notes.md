@@ -1,3 +1,10 @@
+# Rough Notes - interesting and valuable patterns evolving in the Open Vision landscape
+- almost a plug and play approach to model fusion for various use cases
+- additional vision encoders beyon CLIP (SigLIP, etc.)
+- refinement of adapter layer approaches between vision encoders and LLM layers (moving beyond original single linear layer in Llava 1.5 to MLP, etc.)
+- increased variation in LLM models, expanding into lighter weight models with fewer parameters than can (almost) run purely on CPU
+- patterns for fine tuning models are being established
+
 ## LLaVA
 
 - https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
@@ -17,6 +24,8 @@ model.to("cuda:0")
 
 ## Idefics
 - https://huggingface.co/HuggingFaceM4/idefics-9b-instruct
+- [Idefics Notebook](https://github.com/donbcolab/moondream/blob/main/notebooks/finetuning_idefics.ipynb) - at this time focuses on defining and displaying the architecture of the Idefics model using the HF Transofrmers model
+
 ```python
 import torch
 from transformers import IdeficsForVisionText2Text, AutoProcessor
@@ -30,6 +39,7 @@ model = IdeficsForVisionText2Text.from_pretrained(checkpoint, torch_dtype=torch.
 
 ## Moondream
 - https://huggingface.co/vikhyatk/moondream2
+- [Moondream Notebook](https://github.com/donbcolab/moondream/blob/main/notebooks/finetuning_moondream.ipynb) - largely based on original notebook, fine tuned on CAPTCHA type dataset
 
 ```python
 pip install transformers einops

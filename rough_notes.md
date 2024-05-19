@@ -7,8 +7,12 @@
 
 ## LLaVA
 
-- https://huggingface.co/xtuner/llava-llama-3-8b-v1_1
-  - untested, but xtuner has some interesting model fusions (llama3, phi3, etc.)
+- Model Cards:
+  - https://huggingface.co/liuhaotian/llava-v1.6-34b
+  - https://huggingface.co/liuhaotian/llava-v1.6-vicuna-13b
+  - https://huggingface.co/liuhaotian/llava-v1.6-mistral-7b
+  - https://huggingface.co/liuhaotian/llava-v1.6-vicuna-7b
+
 - https://llava.hliu.cc/
 ```python
 from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
@@ -22,8 +26,13 @@ model = LlavaNextForConditionalGeneration.from_pretrained("llava-hf/llava-v1.6-m
 model.to("cuda:0")
 ```
 
-## Idefics
-- https://huggingface.co/HuggingFaceM4/idefics-9b-instruct
+## Idefics2
+- model cards
+  - https://huggingface.co/HuggingFaceM4/idefics2-8b
+  - https://huggingface.co/HuggingFaceM4/idefics2-8b-chatty
+  - https://huggingface.co/HuggingFaceM4/idefics2-8b-base
+  - https://huggingface.co/datasets/HuggingFaceM4/the_cauldron
+  - https://huggingface.co/datasets/HuggingFaceM4/OBELICS
 - [Idefics Notebook](https://github.com/donbcolab/moondream/blob/main/notebooks/finetuning_idefics.ipynb) - at this time focuses on defining and displaying the architecture of the Idefics model using the HF Transofrmers model
 
 ```python
@@ -37,8 +46,15 @@ model = IdeficsForVisionText2Text.from_pretrained(checkpoint, torch_dtype=torch.
 
 ```
 
+## xtuner
+- model card
+  - https://huggingface.co/xtuner/llava-phi-3-mini-hf
+  - https://huggingface.co/xtuner/llava-llama-3-8b-v1_1-hf
+  - https://huggingface.co/xtuner/llava-llama-3-8b-v1_1-transformers
+
 ## Moondream
-- https://huggingface.co/vikhyatk/moondream2
+- model card
+  - https://huggingface.co/vikhyatk/moondream2
 - [Moondream Notebook](https://github.com/donbcolab/moondream/blob/main/notebooks/finetuning_moondream.ipynb) - largely based on original notebook, fine tuned on CAPTCHA type dataset
 
 ```python
@@ -63,6 +79,9 @@ model = AutoModelForCausalLM.from_pretrained(
 #### Slides
 - https://docs.google.com/presentation/d/1C4MmT3-JNRpVMgoA14pQC7Ie6vBo0gj70CR_jqTIpos/edit#slide=id.gcb9a0b074_1_0
 - https://docs.google.com/presentation/d/1LTF8PLe2kwLaddeqwgCRWnTabt7b5EEviFq29x3zlyw/edit#slide=id.gcb9a0b074_1_0
+
+### XTuner models
+- have a variety of interesting LLaVA variants with various LLMs (Llama3, Phi3, etc.)
 
 ## arXiv papers
 

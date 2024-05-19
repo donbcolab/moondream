@@ -46,6 +46,11 @@ model = IdeficsForVisionText2Text.from_pretrained(checkpoint, torch_dtype=torch.
 
 ```
 
+## mantis
+- model card
+  - https://huggingface.co/TIGER-Lab/Mantis-8B-clip-llama3
+  - https://huggingface.co/TIGER-Lab/Mantis-8B-siglip-llama3
+
 ## xtuner
 - model card
   - https://huggingface.co/xtuner/llava-phi-3-mini-hf

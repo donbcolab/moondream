@@ -1,6 +1,6 @@
 # Rough Notes - interesting and valuable patterns evolving in the Open Vision landscape
 - almost a plug and play approach to model fusion for various use cases
-- additional vision encoders beyon CLIP (SigLIP, etc.)
+- additional vision encoders supported beyond CLIP (SigLIP, etc.)
 - refinement of adapter layer approaches between vision encoders and LLM layers (moving beyond original single linear layer in Llava 1.5 to MLP, etc.)
 - increased variation in LLM models, expanding into lighter weight models with fewer parameters than can (almost) run purely on CPU
 - patterns for fine tuning models are being established
